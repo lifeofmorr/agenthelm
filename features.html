@@ -27,69 +27,83 @@
   <p class="sub">BAND (Thenovi AI, Oct 2026) gave fleets a shared room. AgentHelm matches the coordination layer — and adds the operator's instruments BAND left out. Anything marked <em>staged</em> on this page is on the roadmap, not in the box today.</p>
 </div>
 
-<section class="block">
-  <div class="wrap split">
-    <div class="split-copy">
+<section class="block feature">
+  <div class="wrap">
+    <div class="sec-head">
       <p class="eyebrow">Approvals inbox</p>
       <h2>Attention is the bottleneck. This is the fix.</h2>
-      <p class="lead">Agents don't wait politely in one place. Their questions scatter across terminals, tools, and machines. The approvals inbox is the single queue where all of it lands — sorted, batch-clearable, logged.</p>
-      <ul class="checks">
-        <li><b>Every kind of ask</b> — permissions, questions, decision requests</li>
-        <li><b>Context attached</b> — which agent, which project, how long it's waited</li>
-        <li><b>Keyboard-first</b> — <kbd>j</kbd>/<kbd>k</kbd> select, <kbd>a</kbd> approve, <kbd>d</kbd> deny, <kbd>r</kbd> refresh</li>
-      </ul>
+      <p class="lead">Every ask from every agent lands in one queue — sorted, batch-clearable, logged.</p>
     </div>
-    <div class="split-visual">
-      <div class="window">
-        <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Approvals inbox — 2 waiting on you</span></div>
-        <img src="assets/console-approvals.svg" alt="The AgentHelm approvals inbox with two pending items: a backfill question from an OpenCode agent on the data-migration project, and a sandbox permission request from a Codex agent on billing-service" width="1520" height="276">
-      </div>
-      <p class="shot-caption">The inbox, live from the demo board. The selected item is outlined — one keystroke clears it.</p>
+  </div>
+  <div class="stage">
+    <div class="window">
+      <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Approvals inbox — 2 waiting on you</span></div>
+      <img src="assets/console-approvals.svg" alt="The AgentHelm approvals inbox with two pending items: a backfill question from an OpenCode agent on the data-migration project, and a sandbox permission request from a Codex agent on billing-service" width="2400" height="276">
     </div>
+    <p class="shot-caption">The inbox, live from the demo board. The selected item is outlined — one keystroke clears it.</p>
+  </div>
+  <div class="wrap">
+    <ul class="checks tri">
+      <li><b>Every kind of ask</b> — permissions, questions, decision requests</li>
+      <li><b>Context attached</b> — which agent, which project, how long it's waited</li>
+      <li><b>Keyboard-first</b> — <kbd>j</kbd>/<kbd>k</kbd> select, <kbd>a</kbd> approve, <kbd>d</kbd> deny, <kbd>r</kbd> refresh</li>
+    </ul>
+    <div class="crop detail">
+      <img src="assets/console-detail-approval.svg" alt="Detail view of the selected approvals item: 'Backfill the new column now, or leave it nullable until the next deploy?' — a question from the OpenCode data-migration agent, with Approve and Deny buttons" width="2120" height="130">
+    </div>
+    <p class="shot-caption">Detail — a decision at reading size. The question, its agent, its wait, its answer.</p>
   </div>
 </section>
 
-<section class="block alt">
-  <div class="wrap split flip">
-    <div class="split-copy">
+<section class="block alt feature">
+  <div class="wrap">
+    <div class="sec-head">
       <p class="eyebrow">Burn accounting</p>
       <h2>Fleets burn money visibly, or invisibly.</h2>
-      <p class="lead">Every agent card carries its token burn and estimated cost, rolled up to a fleet total in the board header. Five agents for a day is a real line item — AgentHelm shows it today, not at month-end.</p>
-      <ul class="checks">
-        <li><b>Per agent, per project, per fleet</b> — three levels of rollup</li>
-        <li><b>Read from session logs</b> — the usage your agents already record</li>
-        <li><b>Status at a glance</b> — working, waiting, idle, done, stalled, on every card</li>
-      </ul>
+      <p class="lead">Every card carries its burn. The board header carries the total.</p>
     </div>
-    <div class="split-visual">
-      <div class="window">
-        <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Fleet — burn by agent</span></div>
-        <img src="assets/console-fleet.svg" alt="Four AgentHelm fleet cards showing tool, project, status chip, current task, last activity, token burn and estimated cost for each agent session" width="1520" height="984">
-      </div>
-      <p class="shot-caption">The demo fleet: 812,400 tokens on the refactor, 402,150 on tests — every card priced, every status visible.</p>
+  </div>
+  <div class="stage">
+    <div class="window">
+      <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Fleet — burn by agent</span></div>
+      <img src="assets/console-fleet.svg" alt="Four AgentHelm fleet cards showing tool, project, status chip, current task, last activity, token burn and estimated cost for each agent session" width="2400" height="480">
     </div>
+    <p class="shot-caption">The demo fleet: 812,400 tokens on the refactor, 402,150 on tests — every card priced, every status visible.</p>
+  </div>
+  <div class="wrap">
+    <ul class="checks tri">
+      <li><b>Per agent, per project, per fleet</b> — three levels of rollup</li>
+      <li><b>Read from session logs</b> — the usage your agents already record</li>
+      <li><b>Status at a glance</b> — working, waiting, idle, done, stalled, on every card</li>
+    </ul>
+    <div class="crop detail">
+      <img src="assets/console-detail-burn.svg" alt="Detail view of the fleet board header: 4 agents, 1 working, 1 waiting, 2 approvals pending, burn 1,520,870 tokens, $4.57 estimated" width="1100" height="42">
+    </div>
+    <p class="shot-caption">Detail — the header never lets the total out of sight.</p>
   </div>
 </section>
 
-<section class="block">
-  <div class="wrap split">
-    <div class="split-copy">
+<section class="block feature">
+  <div class="wrap">
+    <div class="sec-head">
       <p class="eyebrow">Handoff briefs</p>
       <h2>Continuity is a document, not a memory.</h2>
-      <p class="lead">Sessions end; work shouldn't restart. One click — or the <kbd>b</kbd> key — generates the brief for any session: task, decisions and approvals, files touched, open items, and a start-here prompt written for the successor.</p>
-      <ul class="checks">
-        <li><b>Generated from the session itself</b> — not hand-written, not forgotten</li>
-        <li><b>Successor-ready</b> — includes the exact prompt to resume the task</li>
-        <li><b>Burn included</b> — the next agent knows what the work has cost so far</li>
-      </ul>
+      <p class="lead">Sessions end; work shouldn't restart. One click — or the <kbd>b</kbd> key — writes the brief.</p>
     </div>
-    <div class="split-visual">
-      <div class="window">
-        <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Handoff brief — billing-service</span></div>
-        <img src="assets/console-brief.svg" alt="A generated AgentHelm handoff brief for the billing-service refactor: task, working status, burn of 812,400 tokens and $2.44 estimated, files touched, and a start-here prompt for the successor" width="2400" height="908">
-      </div>
-      <p class="shot-caption">A real brief, generated from the demo board's own session data.</p>
+  </div>
+  <div class="stage">
+    <div class="window">
+      <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Handoff brief — billing-service</span></div>
+      <img src="assets/console-brief.svg" alt="A generated AgentHelm handoff brief for the billing-service refactor: task, working status, burn of 812,400 tokens and $2.44 estimated, files touched, and a start-here prompt for the successor" width="2400" height="868">
     </div>
+    <p class="shot-caption">A real brief, generated from the demo board's own session data.</p>
+  </div>
+  <div class="wrap">
+    <ul class="checks tri">
+      <li><b>Generated from the session itself</b> — not hand-written, not forgotten</li>
+      <li><b>Successor-ready</b> — includes the exact prompt to resume the task</li>
+      <li><b>Burn included</b> — the next agent knows what the work has cost so far</li>
+    </ul>
   </div>
 </section>
 
