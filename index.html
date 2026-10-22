@@ -1,7 +1,173 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AgentHelm — Every agent. One helm.</title><meta name="description" content="AgentHelm is the fleet operations console for coding agents: every agent session, its status, its spend, and every decision it needs — on one board, with one approvals inbox and automatic handoff briefs. Free for up to 3 agents."><meta property="og:title" content="AgentHelm — Every agent. One helm."><meta property="og:description" content="One board for every coding agent you run: status, burn, approvals, handoffs. Local-first, cross-tool, zero config."><meta property="og:type" content="website"><link rel="stylesheet" href="styles.css"><link rel="icon" type="image/svg+xml" href="assets/logo.svg">
-<meta name="theme-color" content="#0b1220">
-</head><body><header class="site"><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/logo.svg" alt="AgentHelm logo" class="brand-logo"><span class="brand-lockup-name">AgentHelm</span></a><nav class="links"><a href="index.html">Home</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a class="cta" href="pricing.html">Get started</a></nav></div></header><main class="wrap"><div class="hero"><h1>Every agent. <span class="hl">One helm.</span></h1><p class="sub">You don't run one coding agent anymore — you run a fleet: Claude Code on the refactor, Codex on the tests, a shell agent on the migration. AgentHelm discovers every session on your machine with zero config and puts status, spend, and every pending decision on one board. Your agents keep their tools. You keep the helm.</p><div class="btnrow"><a class="btn" href="pricing.html">Start free — up to 3 agents</a><a class="btn ghost" href="features.html">See it vs. BAND</a></div>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgentHelm — Every agent. One helm.</title>
+<meta name="description" content="AgentHelm is the fleet operations console for coding agents: every agent session, its status, its spend, and every decision it needs — on one board, with one approvals inbox and automatic handoff briefs. Free for up to 3 agents.">
+<meta property="og:title" content="AgentHelm — Every agent. One helm.">
+<meta property="og:description" content="One board for every coding agent you run: status, burn, approvals, handoffs. Local-first, cross-tool, zero config.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://agenthelm.lifeofmorr.com/">
+<meta property="og:image" content="https://agenthelm.lifeofmorr.com/assets/logo.svg">
+<meta name="theme-color" content="#fbfbfd">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body>
+<header class="site"><div class="wrap nav">
+<a class="brand" href="index.html"><img src="assets/logo.svg" alt="AgentHelm logo" class="brand-logo">AgentHelm</a>
+<nav class="links"><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a class="cta" href="pricing.html">Get started</a></nav>
+</div></header>
+
+<main>
+<div class="hero wrap">
+  <p class="eyebrow">Fleet operations console for coding agents</p>
+  <h1>Every agent. <span class="hl">One helm.</span></h1>
+  <p class="sub">You don't run one coding agent anymore — you run a fleet: Claude Code on the refactor, Codex on the tests, a shell agent on the migration. AgentHelm discovers every session on your machine with zero config and puts status, spend, and every pending decision on one board.</p>
+  <div class="btnrow">
+    <a class="btn" href="pricing.html">Start free — up to 3 agents</a>
+    <a class="link-arrow" href="features.html">See the features</a>
+  </div>
+  <p class="fineprint">Runs locally · Nothing leaves your machine · No account to start</p>
+  <div class="window">
+    <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">AgentHelm — fleet board · local console</span></div>
+    <img src="assets/console-board.svg" alt="The AgentHelm fleet board, live from the product's demo: an approvals inbox with two decisions waiting, and four agent sessions across three projects showing status, current task, token burn and estimated cost" width="2640" height="1300">
+  </div>
+  <p class="shot-caption">The actual console, running its demo fleet: four agents, two decisions waiting on a human, 1,520,870 tokens burned — all visible at a glance.</p>
+  <p class="toolstrip">Reads the session stores of <b>Claude Code</b> · <b>Codex</b> · <b>GitHub Copilot</b> · <b>OpenCode</b> · <b>Cursor-class agents</b></p>
 </div>
-<section class="block"><h2>Why AgentHelm</h2><p class="lead">Fleets don't break down in the coding. They break down in the human's attention: a permission prompt in a terminal you weren't watching, a stalled agent discovered an hour late, a handoff that lost the thread. AgentHelm is built for that side of the fleet.</p><div class="grid3"><div class="card"><span class="icon-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h10"/></svg></span><h3>One board, whole fleet</h3><p>Every agent session across every project: working, waiting, idle, done, stalled — with current task and last activity. Stall detection is automatic, not something you notice by luck.</p></div><div class="card"><span class="icon-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span><h3>Approvals inbox</h3><p>Every permission prompt, question, and decision request from every tool, in one queue. Clear twenty decisions in a batch instead of babysitting four terminals.</p></div><div class="card"><span class="icon-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5"/></svg></span><h3>Burn accounting</h3><p>Token and cost burn per agent, rolled up per project — computed from your agents' own session logs, with estimates labeled as estimates. Know what today's fleet cost before the invoice does.</p></div><div class="card"><span class="icon-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 7h13M17 3l4 4-4 4M16 17H3M7 13l-4 4 4 4"/></svg></span><h3>Handoff briefs, automatic</h3><p>When an agent finishes or gets replaced, AgentHelm writes the brief — task, decisions, files touched, open items — and hands it to the successor. Context stops being hand-carried, permanently.</p></div><div class="card"><span class="icon-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></span><h3>Cross-tool, Cursor included</h3><p>Claude Code, Codex CLI, GitHub Copilot, OpenCode — and the Cursor-class agents BAND launched without. Adapters read each tool's own session store; a generic adapter tracks any long-running agent process.</p></div><div class="card"><span class="icon-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></span><h3>Local-first and instant</h3><p>The console runs on your machine and reads local session data. No account to start, nothing leaves the box, interactions stay under 100ms, and the whole board is keyboard-driven.</p></div></div></section>
-<section class="block dark"><h2>Flat plans from $0</h2><p class="lead">Free for up to 3 agents. Pro is $19/mo with the approvals inbox and burn accounting. Fleet is $49/mo with task routing. Published prices, no sales call — the way fleet tools should be sold.</p><div class="btnrow"><a class="btn" href="pricing.html">Compare plans</a></div></section></main><footer class="site"><div class="wrap"><div class="cols"><div><a href="about.html">About</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a></div></div><p class="small">© 2026 AgentHelm. All rights reserved. Every agent. One helm.</p></div></footer>
-</body></html>
+
+<section class="block alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Fleets don't break down in the coding.<br>They break down in your attention.</h2>
+      <p class="lead">The agents are fast. The bottleneck is the human switching between terminals, catching stalls late, and hand-carrying context from one session to the next. AgentHelm is built for that side of the fleet.</p>
+    </div>
+    <div class="grid3">
+      <div class="card"><span class="icon-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8v5M12 16.5v.5"/><circle cx="12" cy="12" r="9"/></svg></span><h3>Prompts you never see</h3><p>A permission request sits in a background terminal for an hour. The agent isn't slow — it's waiting on you, and nobody told you.</p></div>
+      <div class="card"><span class="icon-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></span><h3>Stalls you notice late</h3><p>An agent finished — or died — forty minutes ago. You find out when you go looking, not when it happens. Stall detection should be automatic.</p></div>
+      <div class="card"><span class="icon-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 7h13M17 3l4 4-4 4M16 17H3M7 13l-4 4 4 4"/></svg></span><h3>Handoffs that lose the thread</h3><p>A session ends and its context ends with it. The successor starts cold — same task, repeated mistakes, decisions re-litigated.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap split">
+    <div class="split-copy">
+      <p class="eyebrow">Approvals inbox</p>
+      <h2>Every decision your fleet needs. One queue.</h2>
+      <p class="lead">Permission prompts, questions, and decision requests from every tool land in a single inbox — sorted, batch-clearable, and logged. Clear twenty decisions in one pass instead of babysitting four terminals.</p>
+      <ul class="checks">
+        <li><b>One queue across every tool</b> — Claude Code, Codex, Copilot, OpenCode, Cursor-class</li>
+        <li><b>Keyboard-driven</b> — <kbd>j</kbd>/<kbd>k</kbd> to move, <kbd>a</kbd> approve, <kbd>d</kbd> deny</li>
+        <li><b>Nothing waits silently</b> — the board shows what's blocked on you, and for how long</li>
+      </ul>
+    </div>
+    <div class="split-visual">
+      <div class="window">
+        <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Approvals inbox — 2 waiting on you</span></div>
+        <img src="assets/console-approvals.svg" alt="The AgentHelm approvals inbox: two pending decisions — a question from an OpenCode migration agent and a permission request from a Codex test agent — each with Approve and Deny actions" width="1520" height="276">
+      </div>
+      <p class="shot-caption">Two real items from the demo board: one question, one permission — both answerable without opening a terminal.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap split flip">
+    <div class="split-copy">
+      <p class="eyebrow">Burn accounting</p>
+      <h2>Know what today's fleet cost. Before the invoice does.</h2>
+      <p class="lead">Five agents running for a day is a real line item. AgentHelm reads the usage your agents already record and rolls token and cost burn up per agent and per project — with estimates labeled as estimates.</p>
+      <ul class="checks">
+        <li><b>Per agent and per project</b> — see exactly which session is spending</li>
+        <li><b>Computed from session logs</b> — not self-reported by the agents</li>
+        <li><b>Estimates say so</b> — if a figure is estimated, the product labels it</li>
+      </ul>
+    </div>
+    <div class="split-visual">
+      <div class="burncard">
+        <h4>Burn by agent — demo fleet</h4>
+        <p class="cap">Exactly as the live board reports it. Costs are estimates from session logs.</p>
+        <div class="burn-row"><div class="who">Claude Code<span>billing-service</span></div><div class="bar"><i style="width:100%"></i></div><div class="val num">812,400<span>$2.44 est.</span></div></div>
+        <div class="burn-row"><div class="who">Codex<span>billing-service</span></div><div class="bar"><i style="width:49.5%"></i></div><div class="val num">402,150<span>$1.21 est.</span></div></div>
+        <div class="burn-row"><div class="who">Claude Code<span>agenthelm</span></div><div class="bar"><i style="width:25.9%"></i></div><div class="val num">210,300<span>$0.63 est.</span></div></div>
+        <div class="burn-row"><div class="who">OpenCode<span>data-migration</span></div><div class="bar"><i style="width:11.8%"></i></div><div class="val num">96,020<span>$0.29 est.</span></div></div>
+        <div class="burn-total"><span>Fleet total</span><span class="num">1,520,870 tok · $4.57 est.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Handoff briefs</p>
+      <h2>Continuity is a document, not a memory.</h2>
+      <p class="lead">When an agent finishes or gets replaced, AgentHelm writes the brief — task, decisions, files touched, open items, and a start-here prompt for the successor. Context stops being hand-carried, permanently.</p>
+    </div>
+    <div class="window" style="max-width:960px;margin:0 auto">
+      <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Handoff brief — billing-service (Claude Code)</span></div>
+      <img src="assets/console-brief.svg" alt="An AgentHelm handoff brief generated from a real demo session: task, status, burn so far, files touched, open items, and a start-here prompt for the successor agent" width="2400" height="908">
+    </div>
+    <p class="shot-caption">A brief the product generated from the demo board's own data — the successor picks up the task, not the archaeology.</p>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>The whole helm, in one console.</h2>
+    </div>
+    <div class="grid3">
+      <div class="card"><span class="icon-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h10"/></svg></span><h3>One board, whole fleet</h3><p>Every agent session across every project: working, waiting, idle, done, stalled — with current task and last activity. Stall detection is automatic, not something you notice by luck.</p></div>
+      <div class="card"><span class="icon-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span><h3>Approvals inbox</h3><p>Every permission prompt, question, and decision request from every tool, in one queue. Clear decisions in a batch instead of babysitting terminals.</p></div>
+      <div class="card"><span class="icon-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5"/></svg></span><h3>Burn accounting</h3><p>Token and cost burn per agent, rolled up per project — computed from your agents' own session logs, with estimates labeled as estimates.</p></div>
+      <div class="card"><span class="icon-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 7h13M17 3l4 4-4 4M16 17H3M7 13l-4 4 4 4"/></svg></span><h3>Handoff briefs, automatic</h3><p>When an agent finishes or gets replaced, AgentHelm writes the brief — task, decisions, files touched, open items — and hands it to the successor.</p></div>
+      <div class="card"><span class="icon-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></span><h3>Cross-tool, Cursor included</h3><p>Claude Code, Codex CLI, GitHub Copilot, OpenCode — and the Cursor-class agents. Adapters read each tool's own session store; a generic adapter tracks any long-running agent process.</p></div>
+      <div class="card"><span class="icon-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></span><h3>Local-first and instant</h3><p>The console runs on your machine and reads local session data. No account to start, nothing leaves the box, interactions stay under 100ms, and the whole board is keyboard-driven.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head left">
+      <h2>Running in three steps.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><p class="n">01</p><h3>Start your agents</h3><p>Claude Code on the refactor, Codex on the tests — exactly as you do today. AgentHelm changes nothing about how your agents run.</p></div>
+      <div class="step"><p class="n">02</p><h3>AgentHelm finds them</h3><p>Adapters read each tool's own session store. Every session appears on the board with its status, task, and burn. Zero config.</p></div>
+      <div class="step"><p class="n">03</p><h3>You steer from one board</h3><p>Decisions land in one inbox. Handoffs write themselves. The fleet stops depending on which terminal you happen to be watching.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap sec-head" style="margin-bottom:0">
+    <h2>Flat plans from $0.</h2>
+    <p class="lead">Free for up to 3 agents. Pro is $19/mo with the approvals inbox and burn accounting. Fleet is $49/mo for working fleets. Published prices, no sales call — the way fleet tools should be sold.</p>
+    <div class="btnrow" style="justify-content:center;margin-top:26px"><a class="btn" href="pricing.html">Compare plans</a></div>
+  </div>
+</section>
+
+<section class="block dark cta-band">
+  <div class="wrap">
+    <h2>Take the helm.</h2>
+    <p>Your fleet is already running. Give it an instrument panel — start free with up to 3 agents.</p>
+    <div class="btnrow"><a class="btn white" href="pricing.html">Start free</a><a class="link-arrow" href="pricing.html" style="color:#2997ff">See pricing</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="site"><div class="wrap">
+<div class="cols">
+  <div class="col"><h5>Product</h5><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="features.html">Compare vs BAND</a></div>
+  <div class="col"><h5>Company</h5><a href="about.html">About</a></div>
+  <div class="col"><h5>Get started</h5><a href="pricing.html">Start free — up to 3 agents</a><a href="pricing.html">See plans</a></div>
+</div>
+<p class="small">© 2026 AgentHelm. All rights reserved. Every agent. One helm.</p>
+</div></footer>
+</body>
+</html>

@@ -1,19 +1,158 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Features — AgentHelm</title><meta name="description" content="AgentHelm vs BAND, feature by feature — including the four things BAND doesn't do: approvals inbox, burn accounting, automatic handoff briefs, published pricing. Staged items are labeled staged, not sold as shipped."><link rel="stylesheet" href="styles.css"><link rel="icon" type="image/svg+xml" href="assets/logo.svg">
-<meta name="theme-color" content="#0b1220">
-</head><body><header class="site"><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/logo.svg" alt="AgentHelm logo" class="brand-logo"><span class="brand-lockup-name">AgentHelm</span></a><nav class="links"><a href="index.html">Home</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a class="cta" href="pricing.html">Get started</a></nav></div></header><main class="wrap"><div class="hero"><h1>Everything BAND has. <span class="hl">Plus the helm.</span></h1><p class="sub">BAND (Thenovi AI, Oct 2026) gave fleets a shared room. AgentHelm matches the coordination layer — and adds the operator's instruments BAND left out. This table is kept honest: anything marked <em>staged</em> is on the roadmap, not in the box today.</p></div>
-<section class="block"><h2>AgentHelm vs BAND</h2><table class="cmp"><tr><th>Capability</th><th>BAND</th><th>AgentHelm</th></tr>
-<tr><td>Fleet dashboard (projects, owners, blockers, progress)</td><td>Yes</td><td>Yes</td></tr>
-<tr><td>Drill-down: fleet → project → agent</td><td>Yes</td><td>Yes</td></tr>
-<tr><td>Shared rooms / agent chat with @mentions</td><td>Yes</td><td>Staged (v1.1)</td></tr>
-<tr><td>Agent-to-agent delegation + handoffs</td><td>Yes</td><td>Staged (v1.1, brief-first)</td></tr>
-<tr><td>Claude Code / Codex / Copilot / OpenCode</td><td>Yes</td><td>Yes</td></tr>
-<tr><td>Cursor support</td><td>No (at launch)</td><td>Yes — generic adapter today, first-class in v1.1</td></tr>
-<tr><td><strong>Approvals inbox — one queue, batch clear</strong></td><td>No</td><td><strong>Yes</strong></td></tr>
-<tr><td><strong>Token/cost burn per agent + project</strong></td><td>No</td><td><strong>Yes</strong></td></tr>
-<tr><td><strong>Automatic handoff briefs</strong></td><td>No</td><td><strong>Yes</strong></td></tr>
-<tr><td><strong>Task routing with budgets + stop conditions</strong></td><td>No</td><td>Staged (v1.1)</td></tr>
-<tr><td>Native desktop app (macOS / Windows / Linux)</td><td>Yes</td><td>Staged — local web console today, same board</td></tr>
-<tr><td>Pricing published</td><td>No (unpublished at launch)</td><td>Yes — $0 / $19 / $49 / $499 flat</td></tr>
-</table><p class="note">BAND facts from BAND's own site and launch coverage (Oct 2026). If BAND ships one of these, this page gets updated — the table is a living document, not a launch-day snapshot.</p></section>
-<section class="block"><h2>The four differences, in plain terms</h2><div class="grid3"><div class="card"><h3>Attention is the bottleneck</h3><p>Agents don't wait politely in one place. Their questions scatter across terminals, tools, and machines. The approvals inbox is the single queue where all of it lands — sorted, batch-clearable, logged.</p></div><div class="card"><h3>Fleets burn money visibly or invisibly</h3><p>Five agents for a day is a real line item. AgentHelm reads the usage your agents already record and shows burn per agent and per project, today, not at month-end.</p></div><div class="card"><h3>Continuity is a document, not a memory</h3><p>Sessions end; work shouldn't restart. The handoff brief is the artifact that carries a task between agents — task, decisions, files, open items, and the successor's first prompt.</p></div><div class="card"><h3>Routing beats watching</h3><p>Staged for v1.1: assign work from one composer to the right tool, in parallel lanes, each with a budget and a stop condition. The helm stops being a monitor and becomes a control.</p></div></div></section></main><footer class="site"><div class="wrap"><div class="cols"><div><a href="about.html">About</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a></div></div><p class="small">© 2026 AgentHelm. All rights reserved. Every agent. One helm.</p></div></footer>
-</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Features — AgentHelm</title>
+<meta name="description" content="AgentHelm vs BAND, feature by feature — including the four things BAND doesn't do: approvals inbox, burn accounting, automatic handoff briefs, published pricing. Staged items are labeled staged, not sold as shipped.">
+<meta property="og:title" content="Features — AgentHelm">
+<meta property="og:description" content="The operator's instruments BAND left out: approvals inbox, burn accounting, automatic handoff briefs, published pricing.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://agenthelm.lifeofmorr.com/features.html">
+<meta property="og:image" content="https://agenthelm.lifeofmorr.com/assets/logo.svg">
+<meta name="theme-color" content="#fbfbfd">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body>
+<header class="site"><div class="wrap nav">
+<a class="brand" href="index.html"><img src="assets/logo.svg" alt="AgentHelm logo" class="brand-logo">AgentHelm</a>
+<nav class="links"><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a class="cta" href="pricing.html">Get started</a></nav>
+</div></header>
+
+<main>
+<div class="hero page wrap">
+  <p class="eyebrow">Features</p>
+  <h1>Everything BAND has. <span class="hl">Plus the helm.</span></h1>
+  <p class="sub">BAND (Thenovi AI, Oct 2026) gave fleets a shared room. AgentHelm matches the coordination layer — and adds the operator's instruments BAND left out. Anything marked <em>staged</em> on this page is on the roadmap, not in the box today.</p>
+</div>
+
+<section class="block">
+  <div class="wrap split">
+    <div class="split-copy">
+      <p class="eyebrow">Approvals inbox</p>
+      <h2>Attention is the bottleneck. This is the fix.</h2>
+      <p class="lead">Agents don't wait politely in one place. Their questions scatter across terminals, tools, and machines. The approvals inbox is the single queue where all of it lands — sorted, batch-clearable, logged.</p>
+      <ul class="checks">
+        <li><b>Every kind of ask</b> — permissions, questions, decision requests</li>
+        <li><b>Context attached</b> — which agent, which project, how long it's waited</li>
+        <li><b>Keyboard-first</b> — <kbd>j</kbd>/<kbd>k</kbd> select, <kbd>a</kbd> approve, <kbd>d</kbd> deny, <kbd>r</kbd> refresh</li>
+      </ul>
+    </div>
+    <div class="split-visual">
+      <div class="window">
+        <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Approvals inbox — 2 waiting on you</span></div>
+        <img src="assets/console-approvals.svg" alt="The AgentHelm approvals inbox with two pending items: a backfill question from an OpenCode agent on the data-migration project, and a sandbox permission request from a Codex agent on billing-service" width="1520" height="276">
+      </div>
+      <p class="shot-caption">The inbox, live from the demo board. The selected item is outlined — one keystroke clears it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap split flip">
+    <div class="split-copy">
+      <p class="eyebrow">Burn accounting</p>
+      <h2>Fleets burn money visibly, or invisibly.</h2>
+      <p class="lead">Every agent card carries its token burn and estimated cost, rolled up to a fleet total in the board header. Five agents for a day is a real line item — AgentHelm shows it today, not at month-end.</p>
+      <ul class="checks">
+        <li><b>Per agent, per project, per fleet</b> — three levels of rollup</li>
+        <li><b>Read from session logs</b> — the usage your agents already record</li>
+        <li><b>Status at a glance</b> — working, waiting, idle, done, stalled, on every card</li>
+      </ul>
+    </div>
+    <div class="split-visual">
+      <div class="window">
+        <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Fleet — burn by agent</span></div>
+        <img src="assets/console-fleet.svg" alt="Four AgentHelm fleet cards showing tool, project, status chip, current task, last activity, token burn and estimated cost for each agent session" width="1520" height="984">
+      </div>
+      <p class="shot-caption">The demo fleet: 812,400 tokens on the refactor, 402,150 on tests — every card priced, every status visible.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap split">
+    <div class="split-copy">
+      <p class="eyebrow">Handoff briefs</p>
+      <h2>Continuity is a document, not a memory.</h2>
+      <p class="lead">Sessions end; work shouldn't restart. One click — or the <kbd>b</kbd> key — generates the brief for any session: task, decisions and approvals, files touched, open items, and a start-here prompt written for the successor.</p>
+      <ul class="checks">
+        <li><b>Generated from the session itself</b> — not hand-written, not forgotten</li>
+        <li><b>Successor-ready</b> — includes the exact prompt to resume the task</li>
+        <li><b>Burn included</b> — the next agent knows what the work has cost so far</li>
+      </ul>
+    </div>
+    <div class="split-visual">
+      <div class="window">
+        <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Handoff brief — billing-service</span></div>
+        <img src="assets/console-brief.svg" alt="A generated AgentHelm handoff brief for the billing-service refactor: task, working status, burn of 812,400 tokens and $2.44 estimated, files touched, and a start-here prompt for the successor" width="2400" height="908">
+      </div>
+      <p class="shot-caption">A real brief, generated from the demo board's own session data.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Cross-tool by design. Local by default.</h2>
+      <p class="lead">Adapters read each tool's own session store — no plugins to install inside your agents, no wrapper commands to learn. A generic adapter tracks any long-running agent process, which is how Cursor-class agents are covered today. And the console runs on your machine: your code and prompts stay on your box.</p>
+    </div>
+    <div class="chiprow" style="justify-content:center">
+      <span class="tchip">Claude Code <span>· adapter</span></span>
+      <span class="tchip">Codex CLI <span>· adapter</span></span>
+      <span class="tchip">GitHub Copilot <span>· adapter</span></span>
+      <span class="tchip">OpenCode <span>· adapter</span></span>
+      <span class="tchip">Cursor-class <span>· generic process adapter</span></span>
+      <span class="tchip">Any long-running agent <span>· generic adapter</span></span>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>AgentHelm vs BAND, kept honest.</h2>
+      <p class="lead">This table is a living document, not a launch-day snapshot. If BAND ships one of these, the page gets updated.</p>
+    </div>
+    <div class="tablecard">
+      <table class="cmp">
+        <tr><th>Capability</th><th>BAND</th><th>AgentHelm</th></tr>
+        <tr><td>Fleet dashboard (projects, owners, blockers, progress)</td><td class="yes">Yes</td><td class="yes"><span class="ck">✓</span> Yes</td></tr>
+        <tr><td>Drill-down: fleet → project → agent</td><td class="yes">Yes</td><td class="yes"><span class="ck">✓</span> Yes</td></tr>
+        <tr><td>Shared rooms / agent chat with @mentions</td><td class="yes">Yes</td><td><span class="staged">Staged (v1.1)</span></td></tr>
+        <tr><td>Agent-to-agent delegation + handoffs</td><td class="yes">Yes</td><td><span class="staged">Staged (v1.1, brief-first)</span></td></tr>
+        <tr><td>Claude Code / Codex / Copilot / OpenCode</td><td class="yes">Yes</td><td class="yes"><span class="ck">✓</span> Yes</td></tr>
+        <tr><td>Cursor support</td><td>No (at launch)</td><td class="yes"><span class="ck">✓</span> Yes — generic adapter today, first-class in v1.1</td></tr>
+        <tr><td><b>Approvals inbox — one queue, batch clear</b></td><td>No</td><td class="yes"><span class="ck">✓</span> <b>Yes</b></td></tr>
+        <tr><td><b>Token/cost burn per agent + project</b></td><td>No</td><td class="yes"><span class="ck">✓</span> <b>Yes</b></td></tr>
+        <tr><td><b>Automatic handoff briefs</b></td><td>No</td><td class="yes"><span class="ck">✓</span> <b>Yes</b></td></tr>
+        <tr><td><b>Task routing with budgets + stop conditions</b></td><td>No</td><td><span class="staged">Staged (v1.1)</span></td></tr>
+        <tr><td>Native desktop app (macOS / Windows / Linux)</td><td class="yes">Yes</td><td><span class="staged">Staged — local web console today, same board</span></td></tr>
+        <tr><td>Pricing published</td><td>No (unpublished at launch)</td><td class="yes"><span class="ck">✓</span> Yes — $0 / $19 / $49 / $499 flat</td></tr>
+      </table>
+    </div>
+    <p class="note">BAND facts from BAND's own site and launch coverage (Oct 2026). Staged features are sold only when they ship — the pricing page says the same thing this table does.</p>
+  </div>
+</section>
+
+<section class="block dark cta-band">
+  <div class="wrap">
+    <h2>See your fleet the way it actually is.</h2>
+    <p>Start free with up to 3 agents. The board you'll get is the board on this page.</p>
+    <div class="btnrow"><a class="btn white" href="pricing.html">Start free</a><a class="link-arrow" href="pricing.html" style="color:#2997ff">See pricing</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="site"><div class="wrap">
+<div class="cols">
+  <div class="col"><h5>Product</h5><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="features.html">Compare vs BAND</a></div>
+  <div class="col"><h5>Company</h5><a href="about.html">About</a></div>
+  <div class="col"><h5>Get started</h5><a href="pricing.html">Start free — up to 3 agents</a><a href="pricing.html">See plans</a></div>
+</div>
+<p class="small">© 2026 AgentHelm. All rights reserved. Every agent. One helm.</p>
+</div></footer>
+</body>
+</html>
