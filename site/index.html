@@ -21,28 +21,32 @@
 </div></header>
 
 <main>
-<div class="hero wrap">
-  <p class="eyebrow">Fleet operations console for coding agents</p>
-  <h1>Every agent. <span class="hl">One helm.</span></h1>
-  <p class="sub">You don't run one coding agent anymore — you run a fleet: Claude Code on the refactor, Codex on the tests, a shell agent on the migration. AgentHelm discovers every session on your machine with zero config and puts status, spend, and every pending decision on one board.</p>
-  <div class="btnrow">
-    <a class="btn" href="pricing.html">Start free — up to 3 agents</a>
-    <a class="link-arrow" href="features.html">See the features</a>
+<div class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Fleet operations console for coding agents</p>
+    <h1>Every agent. <span class="hl">One helm.</span></h1>
+    <p class="sub">You run a fleet now — Claude Code on the refactor, Codex on the tests, a shell agent on the migration. AgentHelm puts every session's status, spend, and pending decisions on one board.</p>
+    <div class="btnrow">
+      <a class="btn" href="pricing.html">Start free — up to 3 agents</a>
+      <a class="link-arrow" href="features.html">See the features</a>
+    </div>
+    <p class="fineprint">Runs locally · Nothing leaves your machine · No account to start</p>
   </div>
-  <p class="fineprint">Runs locally · Nothing leaves your machine · No account to start</p>
-  <div class="window">
-    <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">AgentHelm — fleet board · local console</span></div>
-    <img src="assets/console-board.svg" alt="The AgentHelm fleet board, live from the product's demo: an approvals inbox with two decisions waiting, and four agent sessions across three projects showing status, current task, token burn and estimated cost" width="2640" height="1300">
+  <div class="stage">
+    <div class="window">
+      <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">AgentHelm — fleet board · local console</span></div>
+      <img src="assets/console-board.svg" alt="The AgentHelm fleet board, live from the product's demo: an approvals inbox with two decisions waiting, and four agent sessions across three projects showing status, current task, token burn and estimated cost" width="3360" height="1330">
+    </div>
+    <p class="shot-caption">The actual console, running its demo fleet: four agents, two decisions waiting, 1,520,870 tokens burned — at a glance.</p>
+    <p class="toolstrip">Reads the session stores of <b>Claude Code</b> · <b>Codex</b> · <b>GitHub Copilot</b> · <b>OpenCode</b> · <b>Cursor-class agents</b></p>
   </div>
-  <p class="shot-caption">The actual console, running its demo fleet: four agents, two decisions waiting on a human, 1,520,870 tokens burned — all visible at a glance.</p>
-  <p class="toolstrip">Reads the session stores of <b>Claude Code</b> · <b>Codex</b> · <b>GitHub Copilot</b> · <b>OpenCode</b> · <b>Cursor-class agents</b></p>
 </div>
 
 <section class="block alt">
   <div class="wrap">
     <div class="sec-head">
       <h2>Fleets don't break down in the coding.<br>They break down in your attention.</h2>
-      <p class="lead">The agents are fast. The bottleneck is the human switching between terminals, catching stalls late, and hand-carrying context from one session to the next. AgentHelm is built for that side of the fleet.</p>
+      <p class="lead">The agents are fast. The bottleneck is the human switching between terminals, catching stalls late, and hand-carrying context from one session to the next.</p>
     </div>
     <div class="grid3">
       <div class="card"><span class="icon-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8v5M12 16.5v.5"/><circle cx="12" cy="12" r="9"/></svg></span><h3>Prompts you never see</h3><p>A permission request sits in a background terminal for an hour. The agent isn't slow — it's waiting on you, and nobody told you.</p></div>
@@ -52,66 +56,68 @@
   </div>
 </section>
 
-<section class="block">
-  <div class="wrap split">
-    <div class="split-copy">
+<section class="block feature">
+  <div class="wrap">
+    <div class="sec-head">
       <p class="eyebrow">Approvals inbox</p>
       <h2>Every decision your fleet needs. One queue.</h2>
-      <p class="lead">Permission prompts, questions, and decision requests from every tool land in a single inbox — sorted, batch-clearable, and logged. Clear twenty decisions in one pass instead of babysitting four terminals.</p>
-      <ul class="checks">
-        <li><b>One queue across every tool</b> — Claude Code, Codex, Copilot, OpenCode, Cursor-class</li>
-        <li><b>Keyboard-driven</b> — <kbd>j</kbd>/<kbd>k</kbd> to move, <kbd>a</kbd> approve, <kbd>d</kbd> deny</li>
-        <li><b>Nothing waits silently</b> — the board shows what's blocked on you, and for how long</li>
-      </ul>
+      <p class="lead">Permission prompts, questions, and decision requests from every tool — sorted, batch-clearable, logged.</p>
     </div>
-    <div class="split-visual">
-      <div class="window">
-        <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Approvals inbox — 2 waiting on you</span></div>
-        <img src="assets/console-approvals.svg" alt="The AgentHelm approvals inbox: two pending decisions — a question from an OpenCode migration agent and a permission request from a Codex test agent — each with Approve and Deny actions" width="1520" height="276">
-      </div>
-      <p class="shot-caption">Two real items from the demo board: one question, one permission — both answerable without opening a terminal.</p>
+  </div>
+  <div class="stage">
+    <div class="window">
+      <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Approvals inbox — 2 waiting on you</span></div>
+      <img src="assets/console-approvals.svg" alt="The AgentHelm approvals inbox: two pending decisions — a question from an OpenCode migration agent and a permission request from a Codex test agent — each with Approve and Deny actions" width="2400" height="276">
     </div>
+    <p class="shot-caption">Two real items from the demo board — both answerable without opening a terminal.</p>
+  </div>
+  <div class="wrap">
+    <ul class="checks tri">
+      <li><b>One queue across every tool</b> — Claude Code, Codex, Copilot, OpenCode, Cursor-class</li>
+      <li><b>Keyboard-driven</b> — <kbd>j</kbd>/<kbd>k</kbd> to move, <kbd>a</kbd> approve, <kbd>d</kbd> deny</li>
+      <li><b>Nothing waits silently</b> — what's blocked on you, and for how long, is always on the board</li>
+    </ul>
   </div>
 </section>
 
-<section class="block alt">
-  <div class="wrap split flip">
-    <div class="split-copy">
+<section class="block alt feature">
+  <div class="wrap">
+    <div class="sec-head">
       <p class="eyebrow">Burn accounting</p>
       <h2>Know what today's fleet cost. Before the invoice does.</h2>
-      <p class="lead">Five agents running for a day is a real line item. AgentHelm reads the usage your agents already record and rolls token and cost burn up per agent and per project — with estimates labeled as estimates.</p>
-      <ul class="checks">
-        <li><b>Per agent and per project</b> — see exactly which session is spending</li>
-        <li><b>Computed from session logs</b> — not self-reported by the agents</li>
-        <li><b>Estimates say so</b> — if a figure is estimated, the product labels it</li>
-      </ul>
+      <p class="lead">Token and cost burn per agent, rolled up per project — read from the session logs your agents already write.</p>
     </div>
-    <div class="split-visual">
-      <div class="burncard">
-        <h4>Burn by agent — demo fleet</h4>
-        <p class="cap">Exactly as the live board reports it. Costs are estimates from session logs.</p>
-        <div class="burn-row"><div class="who">Claude Code<span>billing-service</span></div><div class="bar"><i style="width:100%"></i></div><div class="val num">812,400<span>$2.44 est.</span></div></div>
-        <div class="burn-row"><div class="who">Codex<span>billing-service</span></div><div class="bar"><i style="width:49.5%"></i></div><div class="val num">402,150<span>$1.21 est.</span></div></div>
-        <div class="burn-row"><div class="who">Claude Code<span>agenthelm</span></div><div class="bar"><i style="width:25.9%"></i></div><div class="val num">210,300<span>$0.63 est.</span></div></div>
-        <div class="burn-row"><div class="who">OpenCode<span>data-migration</span></div><div class="bar"><i style="width:11.8%"></i></div><div class="val num">96,020<span>$0.29 est.</span></div></div>
-        <div class="burn-total"><span>Fleet total</span><span class="num">1,520,870 tok · $4.57 est.</span></div>
-      </div>
+  </div>
+  <div class="stage">
+    <div class="window">
+      <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Fleet — every session, priced</span></div>
+      <img src="assets/console-fleet.svg" alt="Four AgentHelm fleet cards showing tool, project, status, current task, last activity, token burn and estimated cost for each agent session — 812,400 tokens on the top session, $4.57 across the fleet" width="2400" height="480">
     </div>
+    <p class="shot-caption">The demo fleet, exactly as the board reports it. Costs are estimates from session logs — and labeled as estimates.</p>
+  </div>
+  <div class="wrap">
+    <ul class="checks tri">
+      <li><b>Per agent and per project</b> — see exactly which session is spending</li>
+      <li><b>Computed from session logs</b> — never self-reported by the agents</li>
+      <li><b>The total stays in view</b> — the board header carries the fleet burn at all times</li>
+    </ul>
   </div>
 </section>
 
-<section class="block">
+<section class="block feature">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">Handoff briefs</p>
       <h2>Continuity is a document, not a memory.</h2>
-      <p class="lead">When an agent finishes or gets replaced, AgentHelm writes the brief — task, decisions, files touched, open items, and a start-here prompt for the successor. Context stops being hand-carried, permanently.</p>
+      <p class="lead">When an agent finishes or gets replaced, AgentHelm writes the brief — so the successor picks up the task, not the archaeology.</p>
     </div>
-    <div class="window" style="max-width:960px;margin:0 auto">
+  </div>
+  <div class="stage">
+    <div class="window">
       <div class="window-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="url">Handoff brief — billing-service (Claude Code)</span></div>
-      <img src="assets/console-brief.svg" alt="An AgentHelm handoff brief generated from a real demo session: task, status, burn so far, files touched, open items, and a start-here prompt for the successor agent" width="2400" height="908">
+      <img src="assets/console-brief.svg" alt="An AgentHelm handoff brief generated from a real demo session: task, status, burn so far, files touched, open items, and a start-here prompt for the successor agent" width="2400" height="868">
     </div>
-    <p class="shot-caption">A brief the product generated from the demo board's own data — the successor picks up the task, not the archaeology.</p>
+    <p class="shot-caption">A brief the product generated from the demo board's own data.</p>
   </div>
 </section>
 
@@ -148,7 +154,7 @@
   <div class="wrap sec-head" style="margin-bottom:0">
     <h2>Flat plans from $0.</h2>
     <p class="lead">Free for up to 3 agents. Pro is $19/mo with the approvals inbox and burn accounting. Fleet is $49/mo for working fleets. Published prices, no sales call — the way fleet tools should be sold.</p>
-    <div class="btnrow" style="justify-content:center;margin-top:26px"><a class="btn" href="pricing.html">Compare plans</a></div>
+    <div class="btnrow" style="justify-content:center;margin-top:28px"><a class="btn" href="pricing.html">Compare plans</a></div>
   </div>
 </section>
 
