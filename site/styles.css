@@ -1,0 +1,55 @@
+/* AgentHelm — portfolio site pattern, helm palette */
+:root{
+  --bg:#0b1220; --panel:#121c30; --line:#22304d; --txt:#e8eef8; --dim:#93a5c4;
+  --amber:#f5a623; --green:#2fbf71; --red:#e5484d; --radius:14px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);
+  font:16px/1.6 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--amber);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--line);background:rgba(11,18,32,.92);position:sticky;top:0;z-index:5}
+.nav{display:flex;align-items:center;gap:18px;padding:12px 20px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--txt);font-weight:700;font-size:18px}
+.brand:hover{text-decoration:none}
+.brand-logo{width:30px;height:30px}
+nav.links{margin-left:auto;display:flex;gap:18px;align-items:center}
+nav.links a{color:var(--dim)}
+nav.links a:hover{color:var(--txt);text-decoration:none}
+nav.links a.cta{color:#0b1220;background:var(--amber);padding:7px 14px;border-radius:9px;font-weight:600}
+.hero{padding:64px 0 30px;text-align:left}
+.hero h1{font-size:44px;line-height:1.12;margin:0 0 14px;letter-spacing:-.01em}
+.hero h1 .hl{color:var(--amber)}
+.hero .sub{font-size:19px;color:var(--dim);max-width:760px;margin:0 0 24px}
+.btnrow{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--amber);color:#0b1220;font-weight:600;
+  padding:11px 20px;border-radius:10px}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+section.block{padding:38px 0}
+section.block h2{font-size:28px;margin:0 0 8px}
+section.block .lead{color:var(--dim);max-width:760px;margin:0 0 22px}
+section.block.dark{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:30px;margin:30px 0}
+.grid3{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.card h3{margin:0 0 6px;font-size:17px}
+.card p{margin:0;color:var(--dim)}
+.icon-chip{display:inline-flex;width:38px;height:38px;border-radius:10px;background:#1a2742;
+  align-items:center;justify-content:center;margin-bottom:10px}
+.icon-chip svg{width:22px;height:22px;stroke:var(--amber);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+table.cmp{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+table.cmp th,table.cmp td{padding:10px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.cmp th{color:var(--dim);font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.price-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.price-card .amt{font-size:32px;font-weight:700}
+.price-card .amt span{font-size:15px;color:var(--dim);font-weight:400}
+.price-card ul{margin:12px 0 18px;padding-left:18px;color:var(--dim)}
+.price-card.flag{border-color:var(--amber)}
+.note{color:var(--dim);font-size:14px}
+footer.site{border-top:1px solid var(--line);margin-top:50px;padding:26px 0 40px}
+footer.site .cols{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:12px}
+footer.site a{color:var(--dim)}
+footer.site .small{color:var(--dim);font-size:13px}
+@media (max-width:640px){.hero h1{font-size:33px}nav.links a:not(.cta){display:none}}
