@@ -1,0 +1,191 @@
+/* ============================================================
+   CINEMATIC KIT v3 — shared visual layer for the portfolio fleet
+   Don's directive 2026-11-01: "3d render, beautiful apple design,
+   cinematic everything — every business."
+
+   A VISUAL LAYER ONLY. It never changes copy, prices, Stripe
+   links, or form actions. It layers on top of the v2 Apple design
+   system through the hooks the fleet already uses:
+   .hero, header.site, .card, .btn, section rhythm.
+
+   Activation: <body class="cine"> + <link> this file LAST in head
+   + cinematic.js before </body>. The hero stage markup is
+   injected by cinematic.js from the script tag's data-hero /
+   data-accent attributes — pages need no hero markup edits.
+
+   Per-business skin = CSS variables on the .cine-stage element
+   (set from the script tag's data attributes by the JS):
+     --cine-accent   primary glow / CTA accent on the dark stage
+     --cine-accent-2 secondary glow (links, gradients)
+     --cine-pos      object-position for the hero render
+   ============================================================ */
+
+:root{
+  --cine-stage-bg:#05070d;
+  --cine-ink:#f5f5f7;
+  --cine-ink-2:rgba(245,245,247,.72);
+  --cine-ink-3:rgba(245,245,247,.55);
+  --cine-accent:#2997ff;
+  --cine-accent-2:#64d2ff;
+  --cine-ease:cubic-bezier(.22,.61,.21,1);
+  --cine-font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Arial,sans-serif;
+}
+
+/* ---------- cinematic hero stage ---------- */
+.cine-hero{
+  position:relative;
+  isolation:isolate;
+  /* visible so a full-bleed stage can escape a container-clipped hero;
+     the stage clips itself via its own overflow:hidden */
+  overflow:visible !important;
+  background:var(--cine-stage-bg) !important;
+  color:var(--cine-ink) !important;
+  min-height:94svh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-top:120px;
+  padding-bottom:96px;
+}
+.cine-stage{
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  overflow:hidden;
+  pointer-events:none;
+}
+/* full-bleed escape for heroes inside a max-width container */
+.cine-stage.cine-bleed{
+  width:100vw;
+  left:50%;
+  margin-left:-50vw;
+}
+.cine-layer{position:absolute;inset:0;will-change:transform}
+.cine-layer img{
+  width:100%;height:100%;
+  object-fit:cover;
+  object-position:var(--cine-pos,50% 50%);
+  transform:scale(1.14);
+  animation:cine-push 2.6s var(--cine-ease) both;
+}
+@keyframes cine-push{from{transform:scale(1.26)}to{transform:scale(1.14)}}
+.cine-scrim{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(4,6,12,.52) 0%,rgba(4,6,12,.68) 46%,rgba(4,6,12,.9) 82%,var(--cine-stage-bg) 100%),
+    radial-gradient(120% 90% at 50% 0%,transparent 40%,rgba(4,6,12,.35) 100%);
+}
+.cine-glow{
+  position:absolute;inset:0;
+  background:radial-gradient(55% 42% at 50% 34%,var(--cine-accent) 0%,transparent 70%);
+  opacity:.16;
+  mix-blend-mode:screen;
+}
+.cine-vignette{
+  position:absolute;inset:0;
+  background:radial-gradient(115% 100% at 50% 42%,transparent 55%,rgba(0,0,0,.5) 100%);
+}
+/* film grain — SVG noise, static, cheap */
+.cine-grain{
+  position:absolute;inset:0;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+
+/* ---------- hero typography on the dark stage ---------- */
+/* Fleet layers (site-ten) set hero type with !important — the kit is the
+   final visual layer, so its stage typography answers in kind. Buttons are
+   deliberately NOT forced: each site's brand CTA color stays sovereign. */
+.cine-hero h1{
+  color:var(--cine-ink) !important;
+  font-size:clamp(2.9rem,7.2vw,5.4rem) !important;
+  line-height:1.04 !important;
+  letter-spacing:-.032em !important;
+  font-weight:700;
+  text-wrap:balance;
+}
+.cine-hero h1 .hl{color:var(--cine-accent) !important}
+.cine-hero .eyebrow{
+  color:var(--cine-accent-2);
+  letter-spacing:.14em;
+}
+.cine-hero .sub,.cine-hero .lead,.cine-hero p.sub{color:var(--cine-ink-2) !important}
+.cine-hero .fineprint,.cine-hero .shot-caption,.cine-hero .toolstrip{color:var(--cine-ink-3) !important}
+.cine-hero .toolstrip b{color:var(--cine-ink-2)}
+.cine-hero .link-arrow{color:var(--cine-accent-2)}
+.cine-hero .btn{
+  background:var(--cine-accent);
+  color:#fff;
+  box-shadow:0 8px 32px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08) inset;
+}
+.cine-hero .btn:hover{background:var(--cine-accent);filter:brightness(1.12)}
+.cine-hero .btn.ghost,.cine-hero .btn.white{
+  background:rgba(255,255,255,.08);
+  color:var(--cine-ink);
+  border:1px solid rgba(255,255,255,.28);
+  -webkit-backdrop-filter:blur(12px);
+  backdrop-filter:blur(12px);
+  box-shadow:none;
+}
+/* product visual sitting on the stage gets a deep glass frame */
+.cine-hero .window,.cine-hero .panel{
+  box-shadow:0 60px 120px rgba(0,0,0,.55),0 8px 28px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.09);
+}
+
+/* ---------- frosted nav: scroll shadow ---------- */
+body.cine header.site{transition:box-shadow .45s var(--cine-ease)}
+body.cine header.site.cine-scrolled{box-shadow:0 12px 34px rgba(0,0,0,.13)}
+
+/* ---------- 3D tilt cards ---------- */
+.cine-tilt{
+  transform-style:preserve-3d;
+  will-change:transform;
+  transition:transform .5s var(--cine-ease),box-shadow .5s var(--cine-ease);
+  position:relative;
+}
+.cine-tilt::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;
+  background:radial-gradient(420px circle at var(--cine-mx,50%) var(--cine-my,50%),rgba(255,255,255,.14),transparent 65%);
+  opacity:0;transition:opacity .35s ease;pointer-events:none;
+}
+.cine-tilt.cine-tilting{transition:transform .08s linear,box-shadow .3s ease}
+.cine-tilt.cine-tilting::after{opacity:1}
+.cine-tilt:hover{
+  box-shadow:0 34px 68px rgba(0,0,0,.17),0 4px 16px rgba(0,0,0,.07);
+}
+/* glass depth for panels on light sections */
+body.cine .card{
+  background:linear-gradient(180deg,rgba(255,255,255,.92),rgba(255,255,255,.78));
+  -webkit-backdrop-filter:saturate(160%) blur(14px);
+  backdrop-filter:saturate(160%) blur(14px);
+  border:1px solid rgba(0,0,0,.06);
+}
+
+/* ---------- reveal choreography (non-.reveal pages only;
+   pages with the v2 .reveal system keep theirs) ---------- */
+[data-cine-reveal]{
+  opacity:0;
+  transform:translateY(34px) scale(.985);
+  transition:opacity 1s var(--cine-ease),transform 1s var(--cine-ease);
+}
+[data-cine-reveal].cine-in{opacity:1;transform:none}
+
+/* ---------- section rhythm ---------- */
+body.cine h2{letter-spacing:-.028em}
+body.cine section .lead{max-width:46ch}
+
+/* ---------- mobile / safety ---------- */
+@media (max-width:734px){
+  .cine-hero{min-height:88svh;padding-top:96px;padding-bottom:72px}
+  .cine-hero h1{font-size:clamp(2.35rem,11.5vw,3.2rem)}
+}
+html,body{overflow-x:clip}
+
+/* ---------- reduced motion: everything settles ---------- */
+@media (prefers-reduced-motion:reduce){
+  .cine-layer img{animation:none;transform:scale(1.05)}
+  .cine-layer{transform:none !important}
+  .cine-tilt{transform:none !important;transition:none}
+  .cine-tilt::after{display:none}
+  [data-cine-reveal]{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
