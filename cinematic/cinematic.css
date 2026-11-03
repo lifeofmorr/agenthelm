@@ -1,7 +1,24 @@
 /* ============================================================
-   CINEMATIC KIT v3 — shared visual layer for the portfolio fleet
+   CINEMATIC KIT v3.2 — shared visual layer for the portfolio fleet
    Don's directive 2026-11-01: "3d render, beautiful apple design,
    cinematic everything — every business."
+
+   v3.2 polish (2026-11-01, from Wave 1-A field reports — defects
+   diagnosed at render level against the staged trees):
+   (a) .cine-stage / .cine-layer now carry the stage background.
+       Hero webps arrive in mixed aspect ratios inside the fixed
+       1600x900 SVG wrapper, whose <image> letterboxes them (meet),
+       leaving transparent bands in the render. With no stage
+       background those bands showed the page behind the bleed —
+       flat gray blocks at the stage's top corners + a top seam.
+   (b) .eyebrow / .kicker pills no longer stretch full-width:
+       as flex items of .cine-hero they were blockified + stretched
+       (align-items default), turning the template's light pill into
+       a gray bar. They now shrink-wrap, centered, as dark glass.
+   (c) The shared template's dark-section rule (.dark{background:
+       #000}) hits hero CTA rows (class "cta-row dark"), painting a
+       solid black bar across the stage. CTA rows on the stage are
+       now transparent; the brand-colored buttons sit on the stage.
 
    A VISUAL LAYER ONLY. It never changes copy, prices, Stripe
    links, or form actions. It layers on top of the v2 Apple design
@@ -53,6 +70,10 @@
   z-index:-1;
   overflow:hidden;
   pointer-events:none;
+  /* v3.2(a): the stage paints its own background so any letterbox
+     band in the hero render reads as stage-black, never as the
+     light page showing through the bleed (gray corner blocks). */
+  background:var(--cine-stage-bg);
 }
 /* full-bleed escape for heroes inside a max-width container */
 .cine-stage.cine-bleed{
@@ -60,7 +81,7 @@
   left:50%;
   margin-left:-50vw;
 }
-.cine-layer{position:absolute;inset:0;will-change:transform}
+.cine-layer{position:absolute;inset:0;will-change:transform;background:var(--cine-stage-bg)}
 .cine-layer img{
   width:100%;height:100%;
   object-fit:cover;
@@ -104,9 +125,24 @@
   text-wrap:balance;
 }
 .cine-hero h1 .hl{color:var(--cine-accent) !important}
-.cine-hero .eyebrow{
+.cine-hero .eyebrow,.cine-hero .kicker{
   color:var(--cine-accent-2);
   letter-spacing:.14em;
+  /* v3.2(b): shrink-wrap the pill. As a flex item of .cine-hero the
+     template's inline-block pill was blockified + stretched into a
+     full-width light bar; now it hugs its text, centered (the
+     template heroes center their type), restyled as dark glass so
+     it belongs on the stage in both flex and wrapped heroes. */
+  align-self:center;
+  width:fit-content;
+  max-width:100%;
+  margin-inline:auto;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:980px;
+  padding:6px 14px;
+  -webkit-backdrop-filter:blur(8px);
+  backdrop-filter:blur(8px);
 }
 .cine-hero .sub,.cine-hero .lead,.cine-hero p.sub{color:var(--cine-ink-2) !important}
 .cine-hero .fineprint,.cine-hero .shot-caption,.cine-hero .toolstrip{color:var(--cine-ink-3) !important}
@@ -118,6 +154,16 @@
   box-shadow:0 8px 32px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08) inset;
 }
 .cine-hero .btn:hover{background:var(--cine-accent);filter:brightness(1.12)}
+/* v3.2(c): the shared template's dark-section rule (.dark) paints
+   any .dark element solid #000 — including hero CTA rows carrying
+   class "cta-row dark", which read as a black bar across the stage.
+   On the stage the row itself is transparent; the buttons (brand
+   accent above, ghost glass below) sit directly on the render. */
+.cine-hero .cta-row,.cine-hero .btn-row,.cine-hero .btnrow,
+.cine-hero .cta-row.dark,.cine-hero .btn-row.dark,.cine-hero .btnrow.dark{
+  background:transparent !important;
+  box-shadow:none !important;
+}
 .cine-hero .btn.ghost,.cine-hero .btn.white{
   background:rgba(255,255,255,.08);
   color:var(--cine-ink);
